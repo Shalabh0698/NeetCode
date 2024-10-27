@@ -1,0 +1,8 @@
+class Solution:
+    def hasDuplicate(self, nums: List[int]) -> bool:
+        seen = set()  # Initialize an empty set to keep track of seen numbers
+        for num in nums:
+            if num in seen:
+                return True  # If num is already in seen, a duplicate is found
+            seen.add(num)  # Add num to seen if it's not already there
+        return False  # No duplicates were found
